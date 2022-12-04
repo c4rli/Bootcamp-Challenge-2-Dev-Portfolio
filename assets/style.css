@@ -1,0 +1,39 @@
+body {
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header {
+    height:100px;
+    background-color: purple;
+    display: flex;
+    align-items: center;
+    padding: 0 2%;
+}
+
+#header-logo {
+    left:0;
+    height:100px;
+}
+
+#header-left {
+    flex:70%;
+}
+
+nav {
+    flex:30%;
+}
+
+header ul {
+    display:flex;
+    justify-content: space-between;
+}
+
+header li {
+    display: inline-block;
+    padding: 0px 10px;
+
+}
+header a {
+    color:white; 
+    text-decoration: none;   
+}
