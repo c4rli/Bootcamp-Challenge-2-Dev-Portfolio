@@ -1,10 +1,18 @@
+:root {
+    --main-dark:#111213;
+    --main-accent:#11BA9A;
+    --main-accent2:#302143;
+    --main-accent3:#9E8DB3;
+}
+
 body {
     font-family: Calibri, 'Trebuchet MS', sans-serif;
+    background-color: var(--main-accent2);
 }
 
 header {
     height:100px;
-    background-color: purple;
+    background-color: var(--main-dark);
     display: flex;
     align-items: center;
     padding: 0 2%;
@@ -16,7 +24,11 @@ header {
 }
 
 #header-left {
+    display: flex;
+    align-items: center;
     flex:70%;
+    color: #11BA9A;
+    font-family: Roboto Flex;
 }
 
 nav {
@@ -34,6 +46,192 @@ header li {
 
 }
 header a {
-    color:white; 
+    color:var(--main-accent); 
     text-decoration: none;   
+    font-size: 30px;
+}
+
+aside {
+    position: fixed;
+    bottom: 1%;
+    width: 80px;
+    height: 291px;
+    left: 1%;
+
+
+background: #D9D9D9;
+border-radius: 50px;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+
+z-index: 1;
+}
+
+.sidebar-icons {
+    height: 40px;
+    width: 40px;
+}
+
+.contentGrid {
+    margin: 1%;
+    display: grid;
+    column-gap: 1%;
+    row-gap: 1%;
+}
+
+#aboutme {
+    height:100vh;
+    grid-template-rows: 70% 30%;
+    grid-template-columns: 80px auto;
+    grid-template-areas:
+    "titlebar hero"
+    "titlebar text"
+    ;
+  }
+
+  #aboutme-hero {
+    grid-area: hero;
+
+    background-image: url("./images/keyboard-hero.png");
+    background-size: cover;
+    background-position: center;
+
+    /* background: #D9D9D9; */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 0 50px;
+}
+
+#aboutme-hero h2 {
+    font-size: 96px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 0 10%;
+    padding:30px;
+    background-color: rgba(255, 255,255,0.8);
+    border-radius: 50px;
+}
+
+  #aboutme-text {
+    grid-area: text;
+    font-size: 36px;
+    padding: 0 50px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color:var(--main-accent3);
+    border-radius: 50px 0 50px 50px;
+    text-align: center;
+  }
+
+  .titlebar {
+    grid-area:titlebar;
+    width: 80px;
+    margin:0 0;
+    /* margin: 0px 10px; */
+    
+    background: var(--main-dark);
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  .titlebar h2 {
+    color: var(--main-accent);
+    font-size: 50px;
+    font-weight: bolder;
+    transform: rotate(270deg);
+  }
+
+  #projects {
+    height:100vh;
+    grid-template-columns: 80px auto;
+    grid-template-areas:
+    "titlebar projectgrid"
+    ;
+  }
+
+
+  #projects-grid {
+    grid-area: projectgrid;
+    height:100vh;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "p1 p1 p1"
+    "p4 p5 p2"
+    "p3 p3 p2"
+    ;
+    column-gap: 0;
+    row-gap: 0;
+  }
+
+  #project-prework{
+    grid-area:p1;
+    background-image: url("./images/tarot-proj.png");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 5px;
+    cursor: pointer;
+    display: grid;
+    align-content: end;
+}
+
+#project-tarot {
+    grid-area:p2;
+    background-image: url("./images/tarot-proj.png");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 5px;
+    cursor: pointer;
+    display: grid;
+    align-content: end;
+}
+
+#project-readability {
+    grid-area:p3;
+    background-image: url("./images/tarot-proj.png");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 5px;
+    cursor: pointer;
+    display: grid;
+    align-content: end;
+}
+
+#project-caesar {
+    grid-area:p4;
+    background-image: url("./images/tarot-proj.png");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 5px;
+    cursor: pointer;
+    display: grid;
+    align-content: end;
+}
+
+#project-LED {
+    grid-area:p5;
+    background-image: url("./images/tarot-proj.png");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 5px;
+    cursor: pointer;
+    display: grid;
+    align-content: end;
 }
