@@ -14,15 +14,20 @@
 </head>
 
 <body>
+
+    <!-- Header  -->
     <header>
+        <!-- Logo + Title Block -->
         <div id="header-left">
             <a id="logo" href="index.html">
                 <img src="./assets/images/alienlogo.png" id="header-logo" alt="Header Logo">
-                <h1>c4rli++ <br>
+                <h1><span style="color:#8557db;">c4rli++</span> <br>
                     viscoplastique? digital studios.
                 </h1>
             </a>
         </div>
+
+        <!-- Navigation Bar -->
         <nav>
             <ul>
                 <li>
@@ -31,93 +36,101 @@
                 <li>
                     <a href="#projects-grid">Projects </a>
                 </li>
-                <li>
-                    <a href="#contact">Contact </a>
+                <li id="last-nav-link">
+                    <a href="#contact-top">Contact </a>
                 </li>
             </ul>
         </nav>
     </header>
-    <aside>
-        <a href="mailto:carli@viscoplastique.xyz"><img src="./assets/images/email-logo.png" class="sidebar-icons"></a>
-        <a href="https://linkedin.com"><img src="./assets/images/linkedin-logo.png" class="sidebar-icons"></a>
-        <a href="https://github.com/c4rli"><img src="./assets/images/github-sign.png" class="sidebar-icons"></a>
+
+    <!-- Sidebar containing social media links -->
+    <aside id="sidebar">
+        <a href="mailto:carli@viscoplastique.xyz"><img src="./assets/images/email-logo.png" class="sidebar-icon"></a>
+        <a href="https://linkedin.com"><img src="./assets/images/linkedin-logo.png" class="sidebar-icon"></a>
+        <a href="https://github.com/c4rli"><img src="./assets/images/github-sign.png" class="sidebar-icon"></a>
     </aside>
 
-    <div id="aboutme" class="contentGrid">
+    <!-- First Section - About Me -->
+    <section id="aboutme" class="contentGrid">
+        
         <div class="titlebar">
-            <div>
+            <div class="titlebar-border">
                 <h2>ABOUT&nbsp;ME</h2>
             </div>
         </div>
-        <div id="aboutme-hero">
-            <h3><span id="monospace">hello, world!</span>I'm carli n. also known as c4rli++ </h3>
+        
+        <div id="aboutme-hero" class="hero-image">
+            <h3 class="hero-text"><span id="monospace">hello, world!</span>I'm carli n. also known as c4rli++ </h3>
         </div>
+        
         <section id="aboutme-text">
-            <p>I am a creative technologist based in London, I currently run <span
-                    style="font-weight:900">viscoplastique? digital studios</span>,an experimental content creation
-                collective. I'm learning front end dev to improve my skills with the goal of becoming a full stack
-                developer.
+            <p>I am digital artist and creative technologist based in London - I started <span style="font-weight:900">viscoplastique? digital studios</span> as an experimental content creation
+                collective. I'm learning front end dev with the end goal of becoming a full stack developer so I can make interesting web experiences.
                 <br>Welcome to my page!
             </p>
         </section>
-    </div>
+    </section>
+
+    <!-- Second Section - Projects -->
 
     <section id="projects" class="contentGrid">
+        
         <div class="titlebar">
-            <div>
+            <div class="titlebar-border">
                 <h2>MY&nbsp;PROJECTS</h2>
             </div>
         </div>
 
         <section id="projects-grid" class="contentGrid">
 
-
-            <a href="https://github.com/c4rli/Bootcamp-Challenge-1-Horiseon-Demo" id="project-prework"
-                class="project-content">
+            <a href="https://github.com/c4rli/Bootcamp-Challenge-1-Horiseon-Demo" id="project-prework" class="project-content">
                 <div class="project-title-container">Horiseon Homepage
-                    <p style="font-size:2vh;">HTML/CSS</p>
+                    <p>HTML + CSS</p>
                 </div>
             </a>
 
             <a href="https://github.com/c4rli/Tarot" id="project-tarot" class="project-content">
                 <div id="title-tarot" class="project-title-container">c4rli's Tarot
-                    <p style="font-size:2vh;">Python</p>
+                    <p>Python</p>
                 </div>
             </a>
 
             <a href="https://github.com/c4rli/CS50" id="project-readability" class="project-content">
                 <div class="project-title-container">Coleman-Liau Index Calculator
-                    <p style="font-size:2vh;">C</p>
+                    <p>C</p>
                 </div>
             </a>
 
             <a href="https://github.com/c4rli/CS50" id="project-caesar" class="project-content">
                 <div class="project-title-container">Caesar Cipher
-                    <p style="font-size:2vh;">C</p>
+                    <p>C</p>
                 </div>
             </a>
 
             <a href="https://github.com/c4rli/Morse-LED" id="project-LED" class="project-content">
                 <div class="project-title-container">Morse LED Arduino
-                    <p style="font-size:2vh;">Assembly Code</p>
+                    <p>Assembly Code</p>
                 </div>
             </a>
-
 
         </section>
     </section>
 
-    <div id="contact" class="contentGrid">
+    <!-- Third Section - Contact Details -->
+
+    <section id="contact" class="contentGrid">
+        
         <div class="titlebar">
-            <div>
+            <div class="titlebar-border">
                 <h2>CONTACT</h2>
             </div>
         </div>
-        <div id="contact-top">
-            <h3>Lets network!</h3>
+
+        <div id="contact-top" class="hero-image">
+            <h3 class="hero-text">Let's network!</h3>
         </div>
         
-        <section id="contact-bottom-1">
+        <section id="contact-bottom-1" class="contact-bottom">
             <div class="contact-title-container">
                 <div class="contact-title">Services</div>
             </div>
@@ -134,41 +147,42 @@
                 <li>
                     Audio/Visual Technician
                 </li>
-
             </ul>
         </section>
         
-        <section id="contact-bottom-2">
-            <div class="contact-title-container2">
-                <div class="contact-title2">Details</div>
+        <section id="contact-bottom-2" class="contact-bottom">
+            <div id="contact-title-container2" class="contact-title-container">
+                <div id="contact-title2" class="contact-title">Details</div>
             </div>
             <ul>
                 <li>
-                    Website: viscoplastique.xyz
+                    Website:&nbsp;<a href="https://viscoplastique.xyz">viscoplastique.xyz</a>
                 </li>
                 <li>
-                    Email: carli@viscoplastique.xyz
+                    Email:&nbsp;<a href="mailto:carli@viscoplastique.xyz">carli@viscoplastique.xyz</a>
 
                 </li>
                 <li>
-                    github: c4rli.github.com
+                    github:&nbsp;<a href="https://github.com/c4rli">c4rli.github.com</a>
                 </li>
                 <li>
-                    Linkedin: linkedin.com
+                     Linkedin:&nbsp;<a href="https://linkedin.com">linkedin.com</a>
                 </li>
-
             </ul>
         </section>
-    </div>
+        
+    </section>
+
+    <!-- Footer -->
 
     <div id="footer" class="contentGrid">
-
         <footer>
             <p>Handtyped with love in London by carli n. for c4rli++ by carli n. in collaboration with carli n. for
                 c4rli++ by carli n. </p>
-            <span style="font-size:20px">2022 - c4rli++ by carli n. </span>
+            <span style="font-size:15px; padding-top:1%">2022 - c4rli++ by carli n. </span>
         </footer>
     </div>
+    
 </body>
 
 </html>

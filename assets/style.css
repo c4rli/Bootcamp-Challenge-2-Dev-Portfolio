@@ -1,15 +1,22 @@
+/* Root and Body */
+
 :root {
     --main-dark: #111213;
     --main-accent: #11BA9A;
     --main-accent2: #24173d;
     --main-accent3: #7fc7ba;
-    /* --main-accent3: #9E8DB3; */
+
+    --main-rounding: 50px;
+    --smaller-rounding:30px;
+
 }
 
 body {
     font-family: Calibri, 'Trebuchet MS', sans-serif;
     background-color: var(--main-accent2);
 }
+
+/* Header */
 
 header {
     height: 100px;
@@ -19,27 +26,26 @@ header {
     padding: 0 2%;
 }
 
-#header-logo {
-    left: 0;
-    height: 100px;
+#header-left {
+    flex: 70%; 
 }
 
-#header-left {
-    display: flex;
-    align-items: center;
-    flex: 70%;
-   
-}
 #logo {
-     color: #11BA9A;
+    width: 250px;
+    color: var(--main-accent);
     font-family: Roboto Flex;
     font-size: 20px;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 250px;
-
 }
+
+#logo img {
+    height: 100px;
+}
+
+/* Navigation Bar */
 
 nav {
     flex: 30%;
@@ -61,16 +67,17 @@ header a {
     font-size: 30px;
 }
 
-aside {
+/* Sidebar - Bottom Left of Screen */
+
+#sidebar {
     position: fixed;
     bottom: 0;
     width: 80px;
     height: 291px;
     left: 1%;
 
-
     background:var(--main-accent);
-    border-radius: 50px;
+    border-radius: var(--main-rounding);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -79,22 +86,80 @@ aside {
     z-index: 1;
 }
 
-.sidebar-icons {
+.sidebar-icon {
     height: 40px;
     width: 40px;
 }
 
+/*  Titlebar - Element on far left of page containing section titles */
+
+.titlebar {
+    grid-area: titlebar;
+    width: 80px;
+
+    background: var(--main-dark);
+    border-radius: var(--main-rounding);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.titlebar h2 {
+    color: var(--main-accent);
+    font-size:5vh;
+    font-weight: bolder;
+    transform: rotate(180deg);
+    writing-mode: vertical-lr;
+}
+
+.titlebar-border {
+    border: solid #11BA9A;
+    padding: 50px 0px;
+    border-radius: var(--main-rounding);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Content grid - defines grid to be used for all grids on page */
+
 .contentGrid {
+    height: 100vh;
     padding: 1%;
+    
     display: grid;
+    grid-template-columns: 80px auto;
     column-gap: 1%;
     row-gap: 1%;
 }
 
+.hero-image {
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text {
+    color: white;
+    font-size: 96px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 0 10%;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: var(--main-rounding);
+}
+
+/* Section 1 - About Me */
+
 #aboutme {
-    height: 100vh;
     grid-template-rows: 7fr 3fr;
-    grid-template-columns: 80px auto;
     grid-template-areas:
         "titlebar hero"
         "titlebar text"
@@ -103,89 +168,34 @@ aside {
 
 #aboutme-hero {
     grid-area: hero;
-
     background-image: url("./images/keyboard-hero.png");
-    background-size: cover;
-    background-position: center;
-
-    /* background: #D9D9D9; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border-radius: 50px 50px 0 0;
-
-}
-
-#aboutme-hero h3 {
-    color: white;
-    font-size: 96px;
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    justify-content: center;
-    text-align: center;
-    margin: 0 10%;
-    padding: 30px;
-    background-color: rgba(0, 0, 0, 0.85);
-    border-radius: 50px;
 }
 
 #monospace {
-    width: 100%;
-    display: inline;
     font-family:  monospace;
     color: var(--main-accent);
 }
 
 #aboutme-text {
-    height: 100%;
     grid-area: text;
+    
+    height: 100%;
     font-size: 36px;
     padding: 0 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    
     background-color: var(--main-accent3);
     border-radius: 0 0 50px 50px;
-    text-align: center;
-}
-
-.titlebar {
-    grid-area: titlebar;
-    width: 80px;
-    margin: 0 0;
-
-    background: var(--main-dark);
-    border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.titlebar h2 {
-    color: var(--main-accent);
     
-    font-size:5vh;
-    font-weight: bolder;
-     transform: rotate(180deg);
-    writing-mode: vertical-lr;
-    text-align: center;
-
 }
 
-.titlebar div {
-    border: solid #11BA9A;
-    padding: 50px 0px;
-    border-radius: 50px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
+/* Section 2 - Projects */
 
 #projects {
-    height: 100vh;
-    grid-template-columns: 80px auto;
     grid-template-areas:
         "titlebar projectgrid"
     ;
@@ -193,7 +203,6 @@ aside {
 
 #projects-grid {
     grid-area: projectgrid;
-    height: 100vh;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
@@ -210,14 +219,38 @@ aside {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    margin: 5px;
-    cursor: pointer;
+
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     border: solid var(--main-accent);
+    
+    margin: 5px;
     border-radius: 1px;
+
+    cursor: pointer;
     text-decoration: none;
+}
+
+.project-title-container {
+    height:20%;
+    font-size:3vh;
+    border-top: solid #11BA9A;
+    border-left: solid #11BA9A;
+    border-radius: 30px 0 0 0 ;
+    background-color: rgba(0,0,0,0.8);
+    padding:1% 7%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+}
+
+.project-title-container p {
+    color: var(--main-accent);
+    padding-top: 2%;
+    font-size: 2vh;
 }
 
 #project-prework {
@@ -248,27 +281,13 @@ aside {
     background-image: url("./images/LED-proj.jpg");
 }
 
-.project-title-container {
-    height:20%;
-    font-size:3vh;
-    border-top: solid #11BA9A;
-    border-left: solid #11BA9A;
-    border-radius: 30px 0 0 0 ;
-    background-color: rgba(0,0,0,0.8);
-    padding:1% 7%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    flex-direction: column;
-}
-
 #title-tarot {
     border-radius: 50px 0 50px 0;
 }
 
+/* Section 3 - Contact Me */
+
 #contact {
-    height: 100vh;
     grid-template-rows: 7fr 3fr;
     grid-template-columns: 80px 1fr 1fr;
     grid-template-areas:
@@ -279,67 +298,53 @@ aside {
 
 #contact-top{
     grid-area: top;
-
     background-image: url("./images/network-hero.jpg");
-    background-size: cover;
-    background-position: center;
-
-    /* background: #D9D9D9; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border-radius: 50px 50px 0 0;
-}
-
-#contact-top h3 {
-    height: auto;
-    color: white;
-    font-size: 96px;
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    justify-content: center;
-    text-align: center;
-    margin: 0 10%;
-    padding: 30px;
-    background-color: rgba(0, 0, 0, 0.85);
-    border-radius: 50px;
 }
 
 #contact-bottom-1{
     grid-area: bottom1;
-
-        height: 100%;
-        font-size: 36px;
-        /* padding: 0 50px; */
-        display: flex;
-        flex-direction: column;
-        /* justify-content: flex-end;
-        align-items: flex-start; */
-        background-color: var(--main-accent3);
-        border-radius: 0 0 50px 50px;
-        text-align: center;
 }
 
 #contact-bottom-2{
     grid-area: bottom1;
-
-        height: 100%;
-        font-size: 36px;
-        /* padding: 0 50px; */
-        display: flex;
-        flex-direction: column;
-        /* justify-content: flex-end;
-        align-items: flex-start; */
-        background-color: var(--main-accent3);
-        border-radius: 0 0 50px 50px;
-        text-align: center;
 }
 
+.contact-bottom {
+    height: 100%;
+    background-color: var(--main-accent3);
+    font-size: 36px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 0 0 50px 50px;
+}
 
-#contact-bottom-1 p {
-    padding: 5% 2%;
-    flex-grow: 100px;
+.contact-bottom ul{
+    padding: 3% 2%;
+}
+
+#contact-bottom-2 ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: center;
+    padding: 3% 2%;
+}
+
+#contact-bottom-2 li{
+    text-align: left;
+}
+
+#contact-bottom-2 a:link, #contact-bottom-2 a:visited{
+    color: var(--main-accent2);
+    text-decoration: none;
+    cursor:pointer;
+}
+
+#contact-bottom-2 a:hover {
+ color: #11BA9A;text-decoration: underline;
 }
 
 .contact-title-container {
@@ -350,19 +355,13 @@ aside {
     justify-content: flex-end;
 }
 
-.contact-title-container2 {
-    width: 100%;
-    height: 20%;
-    display: flex;
-    align-items: center;
+#contact-title-container2 {
     justify-content: flex-start;
 }
 
 .contact-title {
     height:100%;
     font-size:3vh;
-    border-bottom: solid #000000;
-    border-left: solid #000000;
     border-radius: 0 0 0 30px ;
     background-color: rgba(0,0,0,0.8);
     padding:0% 7%;
@@ -373,37 +372,21 @@ aside {
     flex-direction: column;
 }
 
-.contact-title2 {
-    height:100%;
-    font-size:3vh;
-    border-bottom: solid #000000;
-    border-left: solid #000000;
+#contact-title2 {
     border-radius: 0 0 30px 0 ;
-    background-color: rgba(0,0,0,0.8);
-    padding:0% 7%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    flex-direction: column;
+
 }
 
 #contact-bottom-2{
     grid-area: bottom2;
 }
 
-#footer {
-    height: 150px;
-    grid-template-columns: 80px auto;
-    grid-template-areas:
-        "titlebar footer"
-    ;
-}
+/* Footer */
 
 footer {
     grid-area: footer;
     height:100px;
-    border-radius: 50px;
+    border-radius: var(--main-rounding);
     background-color: var(--main-dark);
     color: var(--main-accent);
     display: flex;
@@ -412,45 +395,199 @@ footer {
     font-size: 25px;
     flex-direction: column;
     padding:20px 30px;
-    text-justify: center;
+    
 }
 
-/* 
-.titlebar-container 
-{
-
-    grid-area: titlebar;
-    width: 100vh;
-    height:80px;
- 
-    display: flex;
-    justify-content:center;
-    align-items: center;
-    transform: rotate(270deg);
+footer p {
+    text-align: center;
 }
 
-.titlebar {
+#footer {
+    height: 150px;
+    grid-template-areas:
+        "titlebar footer"
+    ;
+}
 
-    height: 80px;
-    width: 100%;
-    
-    
-    
-    margin: 0 0;
-    /* margin: 0px 10px; */
-/* 
-    background: var(--main-dark);
-    border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* padding-top: 20px; */
-/*} */
+@media only screen and (max-width: 1000px) {
+    #aboutme-hero h3, #contact-top h3   {
+        font-size: 60px;
+    }
 
-/* .titlebar h2 {
-    /* margin-top: -200px; */
-    /* color: var(--main-accent);
-    font-size: 50px;
-    font-weight: bolder;
-    /* transform: rotate(270deg); */
-/* } */
+    #aboutme-text, .contact-bottom {
+        font-size: 25px;
+    }
+    #contact-bottom-2 {
+        font-size: 24px;
+    }
+
+    footer {
+        height: 70px;
+        font-size: 20px;
+    }
+    
+    #footer {
+        height: 100%;
+    }
+
+    .contact-title-container {
+        padding-bottom: 5%;
+    }
+
+    .project-title-container {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    header a {
+        font-size: 10px;
+    }
+
+    header {
+        height: auto;
+        background-color: var(--main-dark);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 2%;
+        margin-bottom: 10px;
+    }
+    
+    header ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100vw;
+    }
+    
+    header li {
+        display: flex;
+        
+        background-color: #11BA9A;
+        padding: 0px 10px;
+        border-bottom: var(--main-dark) solid 1px;
+        padding: 5px 0;
+        
+    }
+    
+    header a {
+        color: var(--main-dark);
+        text-decoration: none;
+        font-size: 30px;
+        width: 100%;
+        height: 100%;
+        display: flex;
+justify-content: center;
+    }
+
+    header li:hover {
+        background-color: var(--main-accent3);
+        color: var(--main-accent);
+
+    }
+
+    #last-nav-link, header {
+        border-radius: 0 0 30px 30px;
+    }
+
+    #sidebar {
+        width: 50px;
+        height: 200px;
+        left: 1%;
+    }
+
+    .titlebar {
+        grid-area: titlebar;
+        width: 50px;
+    
+        background: var(--main-dark);
+        border-radius: var(--main-rounding);
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    #aboutme { 
+        grid-template-columns: 50px auto;
+        grid-template-rows: 2fr 1fr;
+    }
+
+    #projects { 
+        grid-template-columns: 50px auto;
+    }
+
+    #contact {
+        grid-template-rows: 3fr 1fr 1fr;
+        grid-template-columns: 50px 1fr;
+        grid-template-areas:
+            "titlebar top"
+            "titlebar bottom1"
+            "titlebar bottom2"
+        ;
+    }
+
+    .contact-title-container {
+        padding-bottom: 0%;
+    }
+
+    #aboutme-hero h3, #contact-top h3   {
+        font-size: 40px;
+    }
+
+    #aboutme-text, .contact-bottom, #contact-bottom-2 {
+        font-size: 22px;
+    }
+
+    footer {
+        border-radius: 30px;
+        
+    }
+
+    #footer {
+        grid-template-columns: 50px auto;
+    }
+
+    #projects-grid {
+        grid-area: projectgrid;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "p1"
+            "p2"
+            "p3"
+            "p4"
+            "p5"
+        ;
+        column-gap: 0;
+        row-gap: 0;
+        padding: 0;
+    }
+
+    #project-tarot, #project-prework, #project-caesar, #project-LED, #project-readability {
+        border-radius: 30px;
+    }
+
+    .project-title-container, #title-tarot {
+        border-radius: 30px 0 30px 0;
+    }
+
+    .contact-bottom, #contact-bottom-1, #contact-bottom-2 {
+        border-radius: 30px;
+    
+    }
+
+    .contact-title {
+        border-radius: 0 30px 0 30px  ;
+    }
+
+    #contact-title2 {
+        border-radius: 30px 0 30px 0  ;
+    }
+
+    .project-title-container {
+        font-size: 20px;
+        padding: 3% 7%;
+    }
+    
+}
