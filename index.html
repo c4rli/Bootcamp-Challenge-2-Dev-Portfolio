@@ -10,16 +10,18 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Flex">
 
     <title>c4rli's Dev Portfolio - Homepage</title>
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>
     <header>
         <div id="header-left">
-            <img src="./assets/images/alienlogo.png" id="header-logo" alt="Header Logo">
-            <h1>c4rli++ <br>
-                viscoplastique? digital studios.
-            </h1>
+            <a id="logo" href="index.html">
+                <img src="./assets/images/alienlogo.png" id="header-logo" alt="Header Logo">
+                <h1>c4rli++ <br>
+                    viscoplastique? digital studios.
+                </h1>
+            </a>
         </div>
         <nav>
             <ul>
@@ -43,15 +45,18 @@
 
     <div id="aboutme" class="contentGrid">
         <div class="titlebar">
-            <h2>ABOUT&nbsp;ME</h2>
+            <div>
+                <h2>ABOUT&nbsp;ME</h2>
+            </div>
         </div>
         <div id="aboutme-hero">
-            <h2>hello, world!<br>I'm carli n. also known as c4rli++</h2>
+            <h3><span id="monospace">hello, world!</span>I'm carli n. also known as c4rli++ </h3>
         </div>
         <section id="aboutme-text">
-            <p>I am a creative technologist based in London, I currently run <span style="font-weight:900">viscoplastique? digital studios</span>, an
-                experimental content creation collective. I'm learning front end dev to improve my skills with the goal
-                of becoming a full stack developer.
+            <p>I am a creative technologist based in London, I currently run <span
+                    style="font-weight:900">viscoplastique? digital studios</span>,an experimental content creation
+                collective. I'm learning front end dev to improve my skills with the goal of becoming a full stack
+                developer.
                 <br>Welcome to my page!
             </p>
         </section>
@@ -59,25 +64,111 @@
 
     <section id="projects" class="contentGrid">
         <div class="titlebar">
-            <h2>MY&nbsp;PROJECTS</h2>
+            <div>
+                <h2>MY&nbsp;PROJECTS</h2>
+            </div>
         </div>
 
         <section id="projects-grid" class="contentGrid">
 
 
-            <a href="https://github.com/c4rli/Bootcamp-Challenge-1-Horiseon-Demo" id="project-prework" class="project-content"></a>
-            
-            <a href="https://github.com/c4rli/Tarot" id="project-tarot" class="project-content"></a>
+            <a href="https://github.com/c4rli/Bootcamp-Challenge-1-Horiseon-Demo" id="project-prework"
+                class="project-content">
+                <div class="project-title-container">Horiseon Homepage
+                    <p style="font-size:2vh;">HTML/CSS</p>
+                </div>
+            </a>
 
-            <a href="https://github.com/c4rli/CS50" id="project-readability" class="project-content"></a>
+            <a href="https://github.com/c4rli/Tarot" id="project-tarot" class="project-content">
+                <div id="title-tarot" class="project-title-container">c4rli's Tarot
+                    <p style="font-size:2vh;">Python</p>
+                </div>
+            </a>
 
-            <a href="https://github.com/c4rli/CS50" id="project-caesar" class="project-content"></a>
+            <a href="https://github.com/c4rli/CS50" id="project-readability" class="project-content">
+                <div class="project-title-container">Coleman-Liau Index Calculator
+                    <p style="font-size:2vh;">C</p>
+                </div>
+            </a>
 
-            <a href="https://github.com/c4rli/Tarot" id="project-LED" class="project-content"></a>
+            <a href="https://github.com/c4rli/CS50" id="project-caesar" class="project-content">
+                <div class="project-title-container">Caesar Cipher
+                    <p style="font-size:2vh;">C</p>
+                </div>
+            </a>
+
+            <a href="https://github.com/c4rli/Morse-LED" id="project-LED" class="project-content">
+                <div class="project-title-container">Morse LED Arduino
+                    <p style="font-size:2vh;">Assembly Code</p>
+                </div>
+            </a>
 
 
         </section>
     </section>
+
+    <div id="contact" class="contentGrid">
+        <div class="titlebar">
+            <div>
+                <h2>CONTACT</h2>
+            </div>
+        </div>
+        <div id="contact-top">
+            <h3>Lets network!</h3>
+        </div>
+        
+        <section id="contact-bottom-1">
+            <div class="contact-title-container">
+                <div class="contact-title">Services</div>
+            </div>
+            <ul>
+                <li>
+                    Front End Development
+                </li>
+                <li>
+                    Graphic Design
+                </li>
+                <li>
+                    Video Editing
+                </li>
+                <li>
+                    Audio/Visual Technician
+                </li>
+
+            </ul>
+        </section>
+        
+        <section id="contact-bottom-2">
+            <div class="contact-title-container2">
+                <div class="contact-title2">Details</div>
+            </div>
+            <ul>
+                <li>
+                    Website: viscoplastique.xyz
+                </li>
+                <li>
+                    Email: carli@viscoplastique.xyz
+
+                </li>
+                <li>
+                    github: c4rli.github.com
+                </li>
+                <li>
+                    Linkedin: linkedin.com
+                </li>
+
+            </ul>
+        </section>
+    </div>
+
+    <div id="footer" class="contentGrid">
+
+        <footer>
+            <p>Handtyped with love in London by carli n. for c4rli++ by carli n. in collaboration with carli n. for
+                c4rli++ by carli n. </p>
+            <span style="font-size:20px">2022 - c4rli++ by carli n. </span>
+        </footer>
+    </div>
 </body>
 
 </html>
