@@ -7,7 +7,7 @@
     --main-accent3: #7fc7ba;
 
     --main-rounding: 50px;
-    --smaller-rounding:30px;
+    --smaller-rounding: 30px;
 
 }
 
@@ -27,7 +27,7 @@ header {
 }
 
 #header-left {
-    flex: 70%; 
+    flex: 70%;
 }
 
 #logo {
@@ -75,8 +75,7 @@ header a {
     width: 80px;
     height: 291px;
     left: 1%;
-
-    background:var(--main-accent);
+    background: var(--main-accent);
     border-radius: var(--main-rounding);
     display: flex;
     flex-direction: column;
@@ -106,7 +105,7 @@ header a {
 
 .titlebar h2 {
     color: var(--main-accent);
-    font-size:5vh;
+    font-size: 5vh;
     font-weight: bolder;
     transform: rotate(180deg);
     writing-mode: vertical-lr;
@@ -122,12 +121,12 @@ header a {
 }
 
 
-/* Content grid - defines grid to be used for all grids on page */
+/* Content grid, hero-image and hero text - defines grid to be used for all grids on page */
 
 .contentGrid {
     height: 100vh;
     padding: 1%;
-    
+
     display: grid;
     grid-template-columns: 80px auto;
     column-gap: 1%;
@@ -173,13 +172,12 @@ header a {
 }
 
 #monospace {
-    font-family:  monospace;
+    font-family: monospace;
     color: var(--main-accent);
 }
 
 #aboutme-text {
     grid-area: text;
-    
     height: 100%;
     font-size: 36px;
     padding: 0 50px;
@@ -187,10 +185,9 @@ header a {
     justify-content: center;
     align-items: center;
     text-align: center;
-    
     background-color: var(--main-accent3);
     border-radius: 0 0 50px 50px;
-    
+
 }
 
 /* Section 2 - Projects */
@@ -219,27 +216,26 @@ header a {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     border: solid var(--main-accent);
-    
     margin: 5px;
     border-radius: 1px;
-
     cursor: pointer;
     text-decoration: none;
 }
 
+/* Project grid content titles */
+
 .project-title-container {
-    height:20%;
-    font-size:3vh;
+    height: 20%;
+    font-size: 3vh;
     border-top: solid #11BA9A;
     border-left: solid #11BA9A;
-    border-radius: 30px 0 0 0 ;
-    background-color: rgba(0,0,0,0.8);
-    padding:1% 7%;
+    border-radius: 30px 0 0 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1% 7%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -252,6 +248,12 @@ header a {
     padding-top: 2%;
     font-size: 2vh;
 }
+
+#title-tarot {
+    border-radius: 50px 0 50px 0;
+}
+
+/*  Individual grid elements */
 
 #project-prework {
     grid-area: p1;
@@ -281,10 +283,6 @@ header a {
     background-image: url("./images/LED-proj.jpg");
 }
 
-#title-tarot {
-    border-radius: 50px 0 50px 0;
-}
-
 /* Section 3 - Contact Me */
 
 #contact {
@@ -296,19 +294,23 @@ header a {
     ;
 }
 
-#contact-top{
+/*  Contact Hero */
+
+#contact-top {
     grid-area: top;
     background-image: url("./images/network-hero.jpg");
     border-radius: 50px 50px 0 0;
 }
 
-#contact-bottom-1{
+#contact-bottom-left {
     grid-area: bottom1;
 }
 
-#contact-bottom-2{
-    grid-area: bottom1;
+#contact-bottom-right {
+    grid-area: bottom2;
 }
+
+/*  Bottom text sections */
 
 .contact-bottom {
     height: 100%;
@@ -320,31 +322,25 @@ header a {
     border-radius: 0 0 50px 50px;
 }
 
-.contact-bottom ul{
+.contact-bottom ul {
     padding: 3% 2%;
 }
 
-#contact-bottom-2 ul{
+.contact-title {
+    height: 100%;
+    font-size: 3vh;
+    border-radius: 0 0 0 30px;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 0% 7%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-
     align-items: center;
-    padding: 3% 2%;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
 }
 
-#contact-bottom-2 li{
-    text-align: left;
-}
-
-#contact-bottom-2 a:link, #contact-bottom-2 a:visited{
-    color: var(--main-accent2);
-    text-decoration: none;
-    cursor:pointer;
-}
-
-#contact-bottom-2 a:hover {
- color: #11BA9A;text-decoration: underline;
+#contact-title-right {
+    border-radius: 0 0 30px 0;
 }
 
 .contact-title-container {
@@ -355,47 +351,36 @@ header a {
     justify-content: flex-end;
 }
 
-#contact-title-container2 {
+#contact-title-container-right {
     justify-content: flex-start;
 }
 
-.contact-title {
-    height:100%;
-    font-size:3vh;
-    border-radius: 0 0 0 30px ;
-    background-color: rgba(0,0,0,0.8);
-    padding:0% 7%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    flex-direction: column;
+/* Links in bottom/right section of contact */
+
+.contact-bottom a:link,
+.contact-bottom a:visited {
+    color: var(--main-dark);
+    text-decoration: none;
+    cursor: pointer;
 }
 
-#contact-title2 {
-    border-radius: 0 0 30px 0 ;
-
+.contact-bottom a:hover {
+    text-decoration: underline;
 }
 
-#contact-bottom-2{
-    grid-area: bottom2;
-}
-
-/* Footer */
+/* Footer - bottom of page */
 
 footer {
     grid-area: footer;
-    height:100px;
     border-radius: var(--main-rounding);
     background-color: var(--main-dark);
     color: var(--main-accent);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: 25px;
-    flex-direction: column;
-    padding:20px 30px;
-    
+    padding: 20px 30px;
 }
 
 footer p {
@@ -409,15 +394,21 @@ footer p {
     ;
 }
 
+/* Media Query for displays smaller than 1000px wide */
+
 @media only screen and (max-width: 1000px) {
-    #aboutme-hero h3, #contact-top h3   {
+
+    #aboutme-hero h3,
+    #contact-top h3 {
         font-size: 60px;
     }
 
-    #aboutme-text, .contact-bottom {
+    #aboutme-text,
+    .contact-bottom {
         font-size: 25px;
     }
-    #contact-bottom-2 {
+
+    #contact-bottom-right {
         font-size: 24px;
     }
 
@@ -425,7 +416,7 @@ footer p {
         height: 70px;
         font-size: 20px;
     }
-    
+
     #footer {
         height: 100%;
     }
@@ -439,6 +430,8 @@ footer p {
     }
 }
 
+/* Media Query for displays smaller than 650px wide - ie small tablets/phones */
+
 @media only screen and (max-width: 650px) {
     header a {
         font-size: 10px;
@@ -446,48 +439,38 @@ footer p {
 
     header {
         height: auto;
-        background-color: var(--main-dark);
-        display: flex;
         flex-direction: column;
-        align-items: center;
         padding: 0 2%;
         margin-bottom: 10px;
     }
-    
+
     header ul {
-        display: flex;
         flex-direction: column;
         justify-content: center;
         width: 100vw;
     }
-    
+
     header li {
-        display: flex;
-        
         background-color: #11BA9A;
         padding: 0px 10px;
         border-bottom: var(--main-dark) solid 1px;
         padding: 5px 0;
-        
     }
-    
+
     header a {
         color: var(--main-dark);
-        text-decoration: none;
         font-size: 30px;
-        width: 100%;
-        height: 100%;
         display: flex;
-justify-content: center;
+        justify-content: center;
     }
 
     header li:hover {
         background-color: var(--main-accent3);
         color: var(--main-accent);
-
     }
 
-    #last-nav-link, header {
+    #last-nav-link,
+    header {
         border-radius: 0 0 30px 30px;
     }
 
@@ -498,23 +481,15 @@ justify-content: center;
     }
 
     .titlebar {
-        grid-area: titlebar;
         width: 50px;
-    
-        background: var(--main-dark);
-        border-radius: var(--main-rounding);
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
     }
 
-    #aboutme { 
+    .contentGrid {
         grid-template-columns: 50px auto;
+    }
+
+    #aboutme {
         grid-template-rows: 2fr 1fr;
-    }
-
-    #projects { 
-        grid-template-columns: 50px auto;
     }
 
     #contact {
@@ -531,25 +506,22 @@ justify-content: center;
         padding-bottom: 0%;
     }
 
-    #aboutme-hero h3, #contact-top h3   {
+    #aboutme-hero h3,
+    #contact-top h3 {
         font-size: 40px;
     }
 
-    #aboutme-text, .contact-bottom, #contact-bottom-2 {
+    #aboutme-text,
+    .contact-bottom,
+    #contact-bottom-right {
         font-size: 22px;
     }
 
     footer {
         border-radius: 30px;
-        
-    }
-
-    #footer {
-        grid-template-columns: 50px auto;
     }
 
     #projects-grid {
-        grid-area: projectgrid;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr;
         grid-template-areas:
@@ -559,35 +531,37 @@ justify-content: center;
             "p4"
             "p5"
         ;
-        column-gap: 0;
-        row-gap: 0;
-        padding: 0;
     }
 
-    #project-tarot, #project-prework, #project-caesar, #project-LED, #project-readability {
+    #project-tarot,
+    #project-prework,
+    #project-caesar,
+    #project-LED,
+    #project-readability {
         border-radius: 30px;
     }
 
-    .project-title-container, #title-tarot {
+    .project-title-container,
+    #title-tarot {
         border-radius: 30px 0 30px 0;
     }
 
-    .contact-bottom, #contact-bottom-1, #contact-bottom-2 {
+    .contact-bottom,
+    #contact-bottom-left,
+    #contact-bottom-right {
         border-radius: 30px;
-    
     }
 
     .contact-title {
-        border-radius: 0 30px 0 30px  ;
+        border-radius: 0 30px 0 30px;
     }
 
-    #contact-title2 {
-        border-radius: 30px 0 30px 0  ;
+    #contact-title-right {
+        border-radius: 30px 0 30px 0;
     }
 
     .project-title-container {
         font-size: 20px;
         padding: 3% 7%;
     }
-    
 }
